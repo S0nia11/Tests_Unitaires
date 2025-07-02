@@ -4,4 +4,5 @@ WORKDIR /app
 COPY . .
 RUN pip install --no-cache-dir -r requirements.txt
 RUN python -m nltk.downloader punkt stopwords wordnet
-CMD ["python", "main.py"]
+ENTRYPOINT ["python"]
+CMD ["main.py"]
